@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+ ">
+ 	
+ <bean class="com.springcore.Student" name ="st1">
+ 		<!-- property : setter injection ,Value as a element-->
+ 		<property name ="studentId" > <value>2244</value></property>
+ 		<!-- Value as a attribute , <property name= "studentId" value="2244" /> -->
+ 		<property name ="studentName"><value>Sumit chourey</value> </property>
+ 		<property name ="studentAddress"><value>Bhopal</value> </property>	
+ 		
+ </bean>
+ 	<!-- Another way to write : p-schema technique(short and consize hai) -->
+ 	
+<!-- <bean class ="com.springcore.Student" name ="st1" p:studentId="23548" p:studentName="Ram singh" p:studentAddress="Delhi"></bean> -->	
+
+<!-- In future kabhi kuch change krna raha data me toh Only(.xml ) file me change karenge or kahi nahi -->
+	
+</beans>

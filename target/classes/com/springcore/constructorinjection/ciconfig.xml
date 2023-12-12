@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+ xmlns:context="http://www.springframework.org/schema/context"
+ xmlns:p="http://www.springframework.org/schema/p"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ https://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd
+ ">
+ 
+
+ 
+ <bean class="com.springcore.constructorinjection.Person" name ="pr1">
+ 	<!-- 1st method -->
+ 	<!-- <constructor-arg>
+ 		<value>Sumit</value>
+ 	</constructor-arg> -->
+ 	<!-- 2nd method -->
+ 	<constructor-arg value="Sumit" />
+ 	<constructor-arg value="23" type="int"/>
+ 	<constructor-arg ref="cr"/>
+ 	
+ 	<property name="list">
+ 	<list>
+ 		<value>1000</value>
+ 		<value>2000</value>
+ 	</list>
+ 	</property>
+ 	
+ </bean>
+
+
+ <!-- Certi k liye object banana tha isly bean class declare ki -->
+ <bean class ="com.springcore.constructorinjection.Certi" name ="cr">
+ 	<constructor-arg value="Android Using Kotlin"/>
+ </bean>
+ 
+ <!--3rd class , type: is for knsa datatype me hona , index: kis sequenies me hona   -->
+ <bean class="com.springcore.constructorinjection.Addition" name="add">
+		<constructor-arg value="12" type="int" index="1"></constructor-arg>
+		<constructor-arg value="23"  type="int" index="0"></constructor-arg>
+	
+ </bean>
+ 	
+ 	
+
+	
+</beans>
